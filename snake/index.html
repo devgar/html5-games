@@ -40,10 +40,10 @@ function game() {
 }
 function keyPush(evt) {
   switch(evt.keyCode) {
-    case 37: xv=-1;yv=0; break;
-    case 38: xv=0;yv=-1; break;
-    case 39: xv=1;yv=0; break;
-    case 40: xv=0;yv=1; break;
+    case 37: if(xv)return; xv=-1;yv=0; break;
+    case 38: if(yv)return; xv=0;yv=-1; break;
+    case 39: if(xv)return; xv=1;yv=0; break;
+    case 40: if(yv)return; xv=0;yv=1; break;
   }
 }
 </script>
